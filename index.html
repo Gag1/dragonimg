@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="file" id="upload" accept="image/*">
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="toolbar">
+            <div class="draggable" draggable="true">🟢</div>
+            <div class="draggable" draggable="true">🔴</div>
+            <div class="draggable" draggable="true">🔵</div>
+        </div>
+        <button id="download">Download Image</button>
+    </div>
+
+    <script src="script.js"></script>
+    <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas-container {
+    position: relative;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.draggable {
+    cursor: move;
+    font-size: 24px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+<script src="main.js"></script>
+</body>
+</html>
